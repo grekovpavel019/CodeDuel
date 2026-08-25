@@ -1,29 +1,61 @@
 import React, { type FC, useRef, useEffect } from "react";
-import { EditorState } from "@codemirror/state";
+import { EditorState, type Extension } from "@codemirror/state";
 import { EditorView, keymap, lineNumbers } from "@codemirror/view";
 import { python } from "@codemirror/lang-python";
-import { undo, history, insertTab, redo } from "@codemirror/commands";
-import { basicSetup } from "@uiw/react-codemirror";
+import { basicSetup } from "codemirror";
 
-const CodeEditor: FC = (): React.JSX.Element => {
+const BASIC_SETUP: Extension[] = [
 
+]
+
+const CASUAL_SETUP: Extension = [
+    ...BASIC_SETUP,
+
+]
+
+type CodeEditorProps = { 
+    casualMode: boolean;
+}
+
+const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Element => {
+
+    const {
+        casualMode
+    } = props;
+
+    // Ссылка на DOM-контейнер, в который будет монтироваться CodeMirror
     const containerRef = useRef<HTMLDivElement>(null)
-
+    
+    // Инициализируем CodeMirror после монтирования DOM-контейнера 
+    // (после получения ref ссылки на нужный dom-element)
     useEffect(() => {
-        const state = EditorState.create({
-            doc: "Hello world",
-            extensions: [
-                lineNumbers(), 
+
+    // Создаём состояние редактора - информация о том, что происходит в codeMirror
+        const state: EditorState = EditorState.create({
+            doc: "", // содержимое редактора
+            extensions: [       // расширения редактора
                 python(),
-                basicSetup()
+                basicSetup,
+                keymap.of([
+                    {
+                        key: "Ctrl-s",
+                        run() { return true; } // отменим поведение браузера по умолчанию
+                    }
+                ])
             ]
         });
 
-        const view = new EditorView({
+        // проверяем на то, что dom элемент создался 
+        // и нам есть куда монтировать компонент
+        if (!containerRef.current) return;
+
+        // Создаём представление редактора и монтируем его в DOM-контейнер
+        const view: EditorView = new EditorView({
             state,
-            parent: containerRef.current!
+            parent: containerRef.current
         })
 
+        // Уничтожаем CodeMirror при размонтировании компонента
         return () => {
             view.destroy();
         }
@@ -33,9 +65,7 @@ const CodeEditor: FC = (): React.JSX.Element => {
     return (
         <div 
             ref={containerRef}
-        >
-
-        </div>
+        />
     );
 };
 
