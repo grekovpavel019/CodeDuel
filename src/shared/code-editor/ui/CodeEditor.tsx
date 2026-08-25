@@ -1,17 +1,8 @@
 import React, { type FC, useRef, useEffect } from "react";
-import { EditorState, type Extension } from "@codemirror/state";
-import { EditorView, keymap, lineNumbers } from "@codemirror/view";
-import { python } from "@codemirror/lang-python";
-import { basicSetup } from "codemirror";
+import { EditorState } from "@codemirror/state";
+import { EditorView, keymap } from "@codemirror/view";
 
-const BASIC_SETUP: Extension[] = [
-
-]
-
-const CASUAL_SETUP: Extension = [
-    ...BASIC_SETUP,
-
-]
+import { DEFAULT_EDITOR_EXTENSIONS, CASUAL_EDITOR_EXTENSIONS } from "../config/editorExtensions";
 
 type CodeEditorProps = { 
     casualMode: boolean;
@@ -34,8 +25,10 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
         const state: EditorState = EditorState.create({
             doc: "", // содержимое редактора
             extensions: [       // расширения редактора
-                python(),
-                basicSetup,
+                casualMode ? 
+                CASUAL_EDITOR_EXTENSIONS : 
+                DEFAULT_EDITOR_EXTENSIONS,
+
                 keymap.of([
                     {
                         key: "Ctrl-s",

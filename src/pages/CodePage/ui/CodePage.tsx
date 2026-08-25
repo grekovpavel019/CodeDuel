@@ -1,11 +1,11 @@
 import React, { type FC } from "react";
 
-import CodeEditor from "@widgets/CodeEditor";
+import CodeEditor from "@shared/code-editor";
 
 const CodePage: FC = (): React.JSX.Element => {
     return (
         <main>
-            <CodeEditor />
+            <CodeEditor casualMode={false} />
         </main>
     );
 };
