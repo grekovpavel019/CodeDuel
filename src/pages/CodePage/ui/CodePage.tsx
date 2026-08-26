@@ -1,12 +1,12 @@
 import React, { type FC } from "react";
 
-import CodeEditor from "@shared/code-editor";
+import ChallengeWorkspace from "@widgets/ChallengeWorkspace";
 
 const CodePage: FC = (): React.JSX.Element => {
     return (
-        <main>
-            <CodeEditor casualMode={false} />
-        </main>
+        <>
+            <ChallengeWorkspace />
+        </>
     );
 };
 

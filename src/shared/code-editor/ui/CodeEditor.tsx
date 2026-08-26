@@ -45,8 +45,10 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
         // Создаём представление редактора и монтируем его в DOM-контейнер
         const view: EditorView = new EditorView({
             state,
-            parent: containerRef.current
-        })
+            parent: containerRef.current,
+            
+        });
+
 
         // Уничтожаем CodeMirror при размонтировании компонента
         return () => {
@@ -57,6 +59,7 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
 
     return (
         <div 
+            className="CodeEditorContaner"
             ref={containerRef}
         />
     );

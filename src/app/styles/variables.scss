@@ -1,8 +1,45 @@
 :root {
-    // Typography
-    --font-body: 'Manrope', sans-serif;
-    --font-heading: 'Cormorant Garamond', serif;
-    --font-code: "JetBrains Mono", monospace;
+    /* Typography */
+    --font-body: 'Manrope', sans-serif; // Основной текст
+    --font-heading: 'Cormorant Garamond', serif; // Заголовки
+    --font-code: 'JetBrains Mono', monospace; // Код
 
-    --bg-code: #131414;
+    /* Page */
+    --bg-page: #0f1010; // Фон страницы
+
+    /* Surfaces */
+    --bg-surface: #171818; // Фон блоков
+    --bg-surface-hover: #1d1f1f; // Фон при наведении
+    --bg-code: #131414; // Фон редактора
+
+    /* Borders */
+    --border-subtle: #292b2b; // Малозаметная граница
+    --border-default: #353737; // Обычная граница
+
+    /* Text */
+    --text-primary: #f1f1ed; // Основной текст
+    --text-secondary: #a5a7a5; // Вторичный текст
+    --text-muted: #6f7270; // Приглушённый текст
+
+    /* Accent */
+    --accent: #d8a84e; // Основной акцент
+    --accent-hover: #e4b968; // Акцент при наведении
+
+    /* Status */
+    --success: #78b88a; // Успех
+    --warning: #d8a84e; // Предупреждение
+    --error: #d56b6b; // Ошибка
+
+    /* Radius */
+    --radius-sm: 4px; // Маленькое скругление
+    --radius-md: 8px; // Среднее скругление
+    --radius-lg: 12px; // Большое скругление
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgb(0 0 0 / 20%); // Маленькая тень
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 25%); // Большая тень
+
+    /* Layout */
+    --header-height: 56px; // Высота шапки
+    --sidebar-width: 320px; // Ширина боковой панели
 }
