@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    min-height: 100vh;
+    // min-height: 100vh;
 
     font-family: var(--font-body);
     font-weight: normal;
@@ -16,6 +16,6 @@ body {
     background-color: var(--color-background);
 }
 
-#root {
-    min-height: 100vh;
-}
+// #root {
+//     min-height: 100vh;
+// }

@@ -1,0 +1,40 @@
+.challengeWorkspace {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: minmax(0, 1fr) 200px;
+
+    grid-template-areas:
+        "taskDescription codeEditor"
+        "taskDescription console";
+
+    height: calc(100vh - var(--header-height));
+}
+
+.taskDescription {
+    grid-area: taskDescription;
+
+    overflow-y: auto;
+}
+
+.codeEditor {
+    grid-area: codeEditor;
+
+    min-height: 0;
+    overflow: hidden;
+}
+
+.codeEditor :global(.cm-editor) {
+    height: 100%;
+}
+
+.codeEditor :global(.cm-scroller) {
+    overflow: auto;
+}
+
+.console {
+    grid-area: console;
+
+    min-height: 0;
+    overflow-y: auto;
+}
