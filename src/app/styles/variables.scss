@@ -5,41 +5,52 @@
     --font-code: 'JetBrains Mono', monospace; // Код
 
     /* Page */
-    --bg-page: #0f1010; // Фон страницы
+    --bg-page: #141414; // Фон приложения
 
     /* Surfaces */
-    --bg-surface: #171818; // Фон блоков
-    --bg-surface-hover: #1d1f1f; // Фон при наведении
-    --bg-code: #131414; // Фон редактора
+    --bg-surface: #282828; // Основные панели
+    --bg-surface-raised: #303030; // Приподнятые элементы
+    --bg-surface-hover: #383838; // Hover элементов
+    --bg-code: #202020; // Редактор кода
+    --bg-console: #202020; // Консоль
+
+    /* Title Bar */
+    --bg-title-bar: #3b3b3b;; // Шапки панелей
+    --title-bar-accent: #d8a84e; // Акцент шапки
 
     /* Borders */
-    --border-subtle: #292b2b; // Малозаметная граница
-    --border-default: #353737; // Обычная граница
+    --border-subtle: #3a3a3a; // Слабая граница
+    --border-default: #464646; // Обычная граница
+    --border-strong: #555555; // Выраженная граница
 
     /* Text */
-    --text-primary: #f1f1ed; // Основной текст
-    --text-secondary: #a5a7a5; // Вторичный текст
-    --text-muted: #6f7270; // Приглушённый текст
+    --text-primary: #eeeeee; // Основной текст
+    --text-secondary: #b5b5b5; // Вторичный текст
+    --text-muted: #8a8a8e; // Приглушённый текст
+    --text-disabled: #626262; // Неактивный текст
 
     /* Accent */
     --accent: #d8a84e; // Основной акцент
-    --accent-hover: #e4b968; // Акцент при наведении
+    --accent-hover: #e5bb69; // Акцент при наведении
+    --accent-muted: #8f743d; // Приглушённый акцент
 
     /* Status */
-    --success: #78b88a; // Успех
-    --warning: #d8a84e; // Предупреждение
-    --error: #d56b6b; // Ошибка
+    --success: #2fbf71; // Успех
+    --warning: #ffa116; // Предупреждение
+    --error: #ec4c56; // Ошибка
+    --info: #4d90fe; // Информация
 
     /* Radius */
     --radius-sm: 4px; // Маленькое скругление
-    --radius-md: 8px; // Среднее скругление
-    --radius-lg: 12px; // Большое скругление
+    --radius-md: 6px; // Среднее скругление
+    --radius-lg: 10px; // Большое скругление
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px rgb(0 0 0 / 20%); // Маленькая тень
-    --shadow-md: 0 8px 24px rgb(0 0 0 / 25%); // Большая тень
+    --shadow-sm: 0 2px 6px rgb(0 0 0 / 25%); // Маленькая тень
+    --shadow-md: 0 6px 18px rgb(0 0 0 / 30%); // Большая тень
 
     /* Layout */
-    --header-height: 56px; // Высота шапки
+    --header-height: 56px; // Высота основной шапки
     --sidebar-width: 320px; // Ширина боковой панели
+    --title-bar-height: 38px; // Высота шапок панелей
 }

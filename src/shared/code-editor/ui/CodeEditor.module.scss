@@ -1,0 +1,21 @@
+.editor {
+    flex: 1;
+
+    overflow-y: auto;
+
+    :global(.cm-focused) {
+        outline: none;
+    }
+    
+    :global(.cm-gutters) {
+        min-width: 27px;
+
+        justify-content: end;
+        
+        :global(.cm-activeLineGutter) {
+            background-color: transparent;
+        }
+    }
+
+}
+

@@ -4,9 +4,9 @@ import { EditorView, keymap } from "@codemirror/view";
 
 import { DEFAULT_EDITOR_EXTENSIONS, CASUAL_EDITOR_EXTENSIONS } from "../config/editorExtensions";
 
-type CodeEditorProps = { 
-    className?: string;
+import styles from "./CodeEditor.module.scss"
 
+type CodeEditorProps = { 
     casualMode: boolean;
 }
 
@@ -14,7 +14,6 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
 
     const {
         casualMode,
-        className
     } = props;
 
     // Ссылка на DOM-контейнер, в который будет монтироваться CodeMirror
@@ -61,7 +60,7 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
 
     return (
         <div 
-            className={className}
+            className={`${styles.editor}`}
             ref={containerRef}
         />
     );

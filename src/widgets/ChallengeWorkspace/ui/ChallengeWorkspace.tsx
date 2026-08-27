@@ -1,8 +1,10 @@
 import React, { type FC } from "react";
 
-import CodeEditor from "@shared/code-editor";
 import Console from "./Console";
 import TaskDescription from "@entities/task";
+import CodeEditor from "@shared/code-editor";
+import TitleBar from "@shared/title-bar";
+import Button from "@shared/button";
 
 import styles from "./ChallengeWorkspace.module.scss"
 
@@ -11,16 +13,26 @@ const ChallengeWorkspace: FC = (): React.JSX.Element => {
         <div
             className={styles.challengeWorkspace}
         >
-            <TaskDescription 
-                className={styles.taskDescription}
-            />
-            <CodeEditor
-                className={styles.codeEditor}
-                casualMode={false}
-            />
-            <Console 
-                className={styles.console}
-            />
+            <div className={styles.taskDescriptionArea}>
+                <TitleBar />
+                <TaskDescription />
+            </div>
+
+            <div className={styles.codeEditorArea}>
+                <TitleBar />
+                <CodeEditor
+                    casualMode={false}
+                />
+            </div>
+
+            <div className={styles.consoleArea}>
+                <TitleBar />
+                <Console />
+            </div>
+
+            <div className={styles.submitCodeArea}>
+                <Button>Клик</Button>
+            </div>
 
         </div>
     );

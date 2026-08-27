@@ -1,40 +1,43 @@
 .challengeWorkspace {
     display: grid;
 
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: minmax(0, 1fr) 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
 
     grid-template-areas:
-        "taskDescription codeEditor"
-        "taskDescription console";
+        "taskDescriptionArea codeEditorArea"
+        "taskDescriptionArea consoleArea"
+        "taskDescriptionArea submitCodeArea";
 
-    height: calc(100vh - var(--header-height));
+    height: 100vh;
+
+    padding: 10px;
 }
 
-.taskDescription {
-    grid-area: taskDescription;
+.taskDescriptionArea {
+    grid-area: taskDescriptionArea;
 
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.codeEditor {
-    grid-area: codeEditor;
-
+.codeEditorArea {
+    grid-area: codeEditorArea;
     min-height: 0;
-    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.codeEditor :global(.cm-editor) {
-    height: 100%;
-}
-
-.codeEditor :global(.cm-scroller) {
-    overflow: auto;
-}
-
-.console {
-    grid-area: console;
-
+.consoleArea {
+    grid-area: consoleArea;
     min-height: 0;
-    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.submitCodeArea {
+    grid-area: submitCodeArea;
 }

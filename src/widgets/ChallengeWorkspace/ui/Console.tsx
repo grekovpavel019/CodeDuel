@@ -14,7 +14,7 @@ const Console: FC<ConsoleProps> = (props: ConsoleProps): React.JSX.Element => {
     
     return (
         <div 
-            className={className}
+            className={`${styles.console} ${className}`}
         >
             Консоль
         </div>
