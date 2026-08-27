@@ -3,18 +3,18 @@ import React, { type FC } from "react";
 import styles from "./Button.module.scss"
 
 type ButtonProps = {
-    children: string
+    children: string,
+
+    handleClick: () => void;
 }
 
 const Button: FC<ButtonProps> = (props: ButtonProps): React.JSX.Element => {
 
     const {
-        children
-    } = props;
+        children,
 
-    const handleClick = (): void => {
-        console.log("Клик")
-    }
+        handleClick
+    } = props;
 
     return (
         <button

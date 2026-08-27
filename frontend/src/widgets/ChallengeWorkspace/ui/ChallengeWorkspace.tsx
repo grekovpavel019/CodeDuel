@@ -1,4 +1,4 @@
-import React, { type FC } from "react";
+import React, { useState, type FC } from "react";
 
 import Console from "./Console";
 import TaskDescription from "@entities/task";
@@ -9,6 +9,13 @@ import Button from "@shared/button";
 import styles from "./ChallengeWorkspace.module.scss"
 
 const ChallengeWorkspace: FC = (): React.JSX.Element => {
+
+    const [code, setCode] = useState("");
+
+    const handleClick = (): void => {
+        console.log(code)
+    }
+
     return (
         <div
             className={styles.challengeWorkspace}
@@ -22,6 +29,7 @@ const ChallengeWorkspace: FC = (): React.JSX.Element => {
                 <TitleBar />
                 <CodeEditor
                     casualMode={false}
+                    onChange={setCode}
                 />
             </div>
 
@@ -31,7 +39,9 @@ const ChallengeWorkspace: FC = (): React.JSX.Element => {
             </div>
 
             <div className={styles.submitCodeArea}>
-                <Button>Клик</Button>
+                <Button
+                    handleClick={handleClick}
+                >Клик</Button>
             </div>
 
         </div>
