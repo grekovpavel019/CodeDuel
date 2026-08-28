@@ -8,26 +8,16 @@ import styles from "./CodeEditor.module.scss"
 
 type CodeEditorProps = { 
     casualMode: boolean;
-    onChange: (code: string) => void;
 }
 
 const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Element => {
 
     const {
         casualMode,
-        onChange
     } = props;
 
     // Ссылка на DOM-контейнер, в который будет монтироваться CodeMirror
     const containerRef = useRef<HTMLDivElement>(null);
-
-    const updateListener = EditorView.updateListener.of((update) => {
-        if (update.docChanged) {
-            const code = update.state.doc.toString();
-
-            onChange(code);
-        }
-    });
     
     // Инициализируем CodeMirror после монтирования DOM-контейнера 
     // (после получения ref ссылки на нужный dom-element)
@@ -47,8 +37,6 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
                         run() { return true; } // отменим поведение браузера по умолчанию
                     }
                 ]),
-
-                updateListener
             ]
         });
 
@@ -67,7 +55,7 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
         return () => {
             view.destroy();
         }
-    }, [onChange, casualMode])
+    }, [casualMode])
 
 
     return (

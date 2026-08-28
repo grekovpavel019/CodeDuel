@@ -1,6 +1,8 @@
 import React, { type FC } from "react";
 
-import styles from "./Console.module.scss"
+import TitleBar from "@shared/components/title-bar";
+
+import styles from "./ConsolePanel.module.scss"
 
 type ConsoleProps = {
     className?: string;
@@ -13,10 +15,13 @@ const Console: FC<ConsoleProps> = (props: ConsoleProps): React.JSX.Element => {
     } = props;
     
     return (
-        <div 
-            className={`${styles.console} ${className}`}
-        >
-            Консоль
+        <div>
+            <TitleBar />
+            <div 
+                className={`${styles.console} ${className}`}
+                >
+                Консоль
+            </div>
         </div>
     );
 };
