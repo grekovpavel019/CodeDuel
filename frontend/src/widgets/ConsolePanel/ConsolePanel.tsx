@@ -4,22 +4,16 @@ import TitleBar from "@shared/components/title-bar";
 
 import styles from "./ConsolePanel.module.scss"
 
-type ConsoleProps = {
-    className?: string;
-}
-
-const Console: FC<ConsoleProps> = (props: ConsoleProps): React.JSX.Element => {
-    
-    const {
-        className
-    } = props;
-    
+const Console: FC = (): React.JSX.Element => {
+        
     return (
-        <div>
+        <div 
+            className={styles.consolePanel}
+        >
             <TitleBar />
-            <div 
-                className={`${styles.console} ${className}`}
-                >
+            <div
+                className={styles.console}
+            >
                 Консоль
             </div>
         </div>
