@@ -11,9 +11,8 @@ const CodeEditorPanel: FC = (): React.JSX.Element => {
             className={styles.codeEditorPanel}
         >
             <TitleBar />
-            <CodeEditor
-                casualMode={false}
-            />
+
+            <CodeEditor casualMode={false} />
         </div>
     );
 };

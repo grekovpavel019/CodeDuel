@@ -1,12 +1,17 @@
 .editor {
-    flex: 1;
 
-    overflow-y: auto;
+    width: 100%;
+    height: calc(100% - 30px);
 
     :global(.cm-focused) {
         outline: none;
     }
-    
+
+    :global(.cm-editor) {
+        width: 100%;
+        height: 100%;     
+    }
+
     :global(.cm-gutters) {
         min-width: 27px;
 
@@ -18,4 +23,3 @@
     }
 
 }
-

@@ -49,7 +49,7 @@ import { python } from "@codemirror/lang-python";
  */
 
 const MAINTENANCED_LANGUAGES: Extension[] = [
-    python(), 
+    python(),
 ]
 
 export const DEFAULT_EDITOR_EXTENSIONS: Extension[] = [

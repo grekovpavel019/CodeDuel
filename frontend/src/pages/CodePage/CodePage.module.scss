@@ -1,11 +1,35 @@
 .challengeWorkspace {
+    height: 100vh;
+    
+    padding: 10px;
+
     display: grid;
 
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
 
     grid-template-areas: 
-        "taskPanel codeEditorPanel"
-        "taskPanel consolePanel"
+        "task code"
+        "task console"
     ;
+}
+
+.taskPanelArea {
+    grid-area: task;
+}
+
+.codeEditorPanelArea {
+    grid-area: code;
+}
+
+.consolePanelArea {
+    grid-area: console;
+}
+
+.taskPanelArea,
+.codeEditorPanelArea,
+.consolePanelArea {
+    min-width: 0;
+    min-height: 0;
 }
