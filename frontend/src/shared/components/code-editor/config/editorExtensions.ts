@@ -1,4 +1,5 @@
-import { EditorState, type Extension } from "@codemirror/state";
+import { editorTheme, editorHighlightStyle } from './editorTheme';
+import { type Extension, EditorState } from "@codemirror/state";
 
 import {
     keymap,
@@ -14,7 +15,6 @@ import {
 
 import {
     bracketMatching,
-    defaultHighlightStyle,
     indentOnInput,
     syntaxHighlighting,
 } from "@codemirror/language";
@@ -34,7 +34,6 @@ import {
 
 import {
     searchKeymap,
-    highlightSelectionMatches,
 } from "@codemirror/search";
 
 import { python } from "@codemirror/lang-python";
@@ -53,6 +52,9 @@ const MAINTENANCED_LANGUAGES: Extension[] = [
 ]
 
 export const DEFAULT_EDITOR_EXTENSIONS: Extension[] = [
+
+    editorTheme,
+
     // Язык программирования редактора.
     ...MAINTENANCED_LANGUAGES,
 
@@ -66,7 +68,9 @@ export const DEFAULT_EDITOR_EXTENSIONS: Extension[] = [
     history(),
 
     // Используем собственное отображение курсора и выделения.
-    drawSelection(),
+    drawSelection({
+        
+    }),
 
     // Показываем курсор при перетаскивании текста в редактор.
     dropCursor(),
@@ -78,7 +82,7 @@ export const DEFAULT_EDITOR_EXTENSIONS: Extension[] = [
     indentOnInput(),
 
     // Включаем стандартную подсветку синтаксиса.
-    syntaxHighlighting(defaultHighlightStyle),
+    syntaxHighlighting(editorHighlightStyle),
 
     // Подсвечиваем парные скобки.
     bracketMatching(),
@@ -97,9 +101,6 @@ export const DEFAULT_EDITOR_EXTENSIONS: Extension[] = [
 
     // Подсвечиваем номер текущей строки.
     highlightActiveLineGutter(),
-
-    // Подсвечиваем совпадения выделенного текста.
-    highlightSelectionMatches(),
 
     // Подключаем стандартные сочетания клавиш CodeMirror.
     keymap.of([
