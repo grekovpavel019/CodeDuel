@@ -30,6 +30,7 @@ import {
     defaultKeymap,
     history,
     historyKeymap,
+    indentWithTab,
 } from "@codemirror/commands";
 
 import {
@@ -115,6 +116,8 @@ export const DEFAULT_EDITOR_EXTENSIONS: Extension[] = [
 
         // Сочетания клавиш для undo/redo.
         ...historyKeymap,
+
+        indentWithTab
     ]),
 ];
 

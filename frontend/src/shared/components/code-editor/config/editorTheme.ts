@@ -20,6 +20,10 @@ export const editorTheme = EditorView.theme({
         color: "var(--editor-text)",
     },
 
+    ".cm-scroller": {
+        scrollbarColor: "var(--editor-scrollbar-controls) transparent"
+    },
+
     ".cm-gutters": {
         minWidth: "30px",
 

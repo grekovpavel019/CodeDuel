@@ -8,4 +8,21 @@
         height: 100%;  
     }
 
+    :global(.cm-scroller) {
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-button:single-button {
+            display: none;
+        }
+    }
+
 }
