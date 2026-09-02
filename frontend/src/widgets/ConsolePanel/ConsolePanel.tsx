@@ -1,6 +1,7 @@
 import React, { type FC } from "react";
 
 import TitleBar from "@shared/components/title-bar";
+import CodeBlock from "@shared/components/code-block";
 
 import styles from "./ConsolePanel.module.scss"
 
@@ -11,11 +12,15 @@ const Console: FC = (): React.JSX.Element => {
             className={styles.consolePanel}
         >
             <TitleBar />
+
             <div
                 className={styles.console}
             >
-                Консоль
+                <CodeBlock>
+                    хуй
+                </CodeBlock>
             </div>
+            
         </div>
     );
 };
