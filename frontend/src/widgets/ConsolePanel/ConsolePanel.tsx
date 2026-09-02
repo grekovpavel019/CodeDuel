@@ -17,7 +17,7 @@ const Console: FC = (): React.JSX.Element => {
                 className={styles.console}
             >
                 <CodeBlock>
-                    хуй
+                    {"хуй\nхуй\n"}
                 </CodeBlock>
             </div>
             

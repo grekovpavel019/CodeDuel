@@ -1,0 +1,14 @@
+.codeBlock {
+    display: block;
+    width: 100%;
+
+    white-space: pre-wrap;
+
+    padding: 5px 10px;
+
+    border-radius: 10px;
+
+    background-color: var(--editor-bg);
+
+    color: var(--text-primary);
+}
