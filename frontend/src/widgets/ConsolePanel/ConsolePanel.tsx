@@ -16,6 +16,10 @@ const Console: FC = (): React.JSX.Element => {
             <div
                 className={styles.console}
             >
+                <div className="consoleHeader">
+                    <span className="outputTime">0</span>
+                </div>
+
                 <CodeBlock>
                     {"хуй\nхуй\n"}
                 </CodeBlock>
