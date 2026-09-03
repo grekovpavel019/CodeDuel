@@ -11,7 +11,7 @@ const CodePage: FC = (): React.JSX.Element => {
 
     const [code, setCode] = useState<string>("");
 
-    const logCode: MouseEventHandler<HTMLButtonElement> = () => {
+    const sendCode: MouseEventHandler<HTMLButtonElement> = () => {
         console.log(code);
     }
 
@@ -34,7 +34,7 @@ const CodePage: FC = (): React.JSX.Element => {
 
             <div className={styles.codeActionsArea}>
                 <CodeActions 
-                    handleClick={logCode}
+                    handleClick={sendCode}
                 />
             </div>
         </main>
