@@ -1,4 +1,4 @@
-import React, { type FC, useState } from "react";
+import React, { type FC, type MouseEventHandler, useState } from "react";
 
 import ConsolePanel from "@widgets/ConsolePanel";
 import CodeEditorPanel from "@widgets/CodeEditorPanel";
@@ -10,6 +10,10 @@ import styles from "./CodePage.module.scss"
 const CodePage: FC = (): React.JSX.Element => {
 
     const [code, setCode] = useState<string>("");
+
+    const logCode: MouseEventHandler<HTMLButtonElement> = () => {
+        console.log(code);
+    }
 
     return (
         <main className={styles.challengeWorkspace}>
@@ -29,7 +33,9 @@ const CodePage: FC = (): React.JSX.Element => {
             </div>
 
             <div className={styles.codeActionsArea}>
-                <CodeActions />
+                <CodeActions 
+                    handleClick={logCode}
+                />
             </div>
         </main>
     );

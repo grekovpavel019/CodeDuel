@@ -1,12 +1,17 @@
-import React, { type FC } from "react";
+import React, { type FC, type MouseEventHandler } from "react";
 
 import styles from "./CodeActions.module.scss"
 
-const CodeActions: FC = (): React.JSX.Element => {
+type CodeActionsProps = {
+    handleClick: MouseEventHandler<HTMLButtonElement>;
+}
 
-    const handleClick = () => {
-        console.log("Кнопка сработала")
-    }
+const CodeActions: FC<CodeActionsProps> = (props: CodeActionsProps): React.JSX.Element => {
+
+    const {
+        handleClick 
+    } = props;
+
 
     return (
         <button
