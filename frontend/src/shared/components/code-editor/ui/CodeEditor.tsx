@@ -1,4 +1,4 @@
-import React, { type FC, useRef, useEffect } from "react";
+import React, { type FC, useRef, useEffect, type Dispatch, type SetStateAction } from "react";
 import { EditorState } from "@codemirror/state";
 import { EditorView, keymap } from "@codemirror/view";
 
@@ -7,6 +7,9 @@ import { DEFAULT_EDITOR_EXTENSIONS, CASUAL_EDITOR_EXTENSIONS } from "../config/e
 import styles from "./CodeEditor.module.scss"
 
 type CodeEditorProps = { 
+    code: string;
+    setCode: Dispatch<SetStateAction<string>>;
+
     casualMode: boolean;
 }
 
@@ -14,6 +17,8 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
 
     const {
         casualMode,
+        code,
+        setCode
     } = props;
 
     // Ссылка на DOM-контейнер, в который будет монтироваться CodeMirror
@@ -25,7 +30,7 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
 
     // Создаём состояние редактора - информация о том, что происходит в codeMirror
         const state: EditorState = EditorState.create({
-            doc: "", // содержимое редактора
+            doc: code, // содержимое редактора
             extensions: [       // расширения редактора
                 casualMode ? 
                 CASUAL_EDITOR_EXTENSIONS : 
@@ -37,6 +42,13 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
                         run() { return true; } // отменим поведение браузера по умолчанию
                     }
                 ]),
+
+                EditorView.updateListener.of((update) => {
+                    if (!update.docChanged) return;
+                        
+                    setCode(update.state.doc.toString());
+                    
+                })
             ]
         });
 
