@@ -11,8 +11,14 @@ const CodePage: FC = (): React.JSX.Element => {
 
     const [code, setCode] = useState<string>("");
 
-    const sendCode: MouseEventHandler<HTMLButtonElement> = () => {
-        console.log(code);
+    const sendCode: MouseEventHandler<HTMLButtonElement> = async () => {
+        const req = await fetch("http://127.0.0.1:3000/code", {
+            method: "POST",
+            body: JSON.stringify({ code }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
     }
 
     return (
