@@ -14,15 +14,13 @@
     /* Code editor */
     --editor-bg: #15171c;
     --editor-text: #d8dbe2;
-    
     --editor-gutter-bg: #191b20;
     --editor-gutter-text: #8e939d;
-
     --editor-active-line: #46586144;
     --editor-selection: #303644;
-
     --editor-scrollbar-controls: #ffffff44;
 
+    /* Syntax HighLight */
     --editor-syntax-keyword: #c792ea;
     --editor-syntax-string: #c3e88d;
     --editor-syntax-number: #f78c6c;
@@ -31,6 +29,9 @@
     --editor-syntax-variable: #d8dee9;
     --editor-syntax-type: #ffcb6b;
     --editor-syntax-operator: #89ddff;
+
+    /* Console */
+    --console-bg: #191b20;
 
     --button-primary: #7fc8a9;
 }

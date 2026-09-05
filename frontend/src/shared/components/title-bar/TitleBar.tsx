@@ -2,12 +2,20 @@ import React, { type FC } from "react";
 
 import styles from "./TitleBar.module.scss"
 
-const TitleBar: FC = (): React.JSX.Element => {
+type TitleBarProps = {
+    children: string;
+}
+
+const TitleBar: FC<TitleBarProps> = (props: TitleBarProps): React.JSX.Element => {
+    const {
+        children
+    } = props;
+    
     return (
         <div
             className={styles.titleBar}
         >
-            Шапочка
+            {children}
         </div>
     );
 };

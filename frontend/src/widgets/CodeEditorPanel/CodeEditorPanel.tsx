@@ -21,7 +21,7 @@ const CodeEditorPanel: FC<CodeEditorPanelProps> = (props: CodeEditorPanelProps):
         <div
             className={styles.codeEditorPanel}
         >
-            <TitleBar />
+            <TitleBar>Code</TitleBar>
 
             <CodeEditor 
                 code={code}

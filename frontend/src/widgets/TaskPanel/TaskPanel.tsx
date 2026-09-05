@@ -10,7 +10,7 @@ const TaskPanel: FC = (): React.JSX.Element => {
         <div 
             className={styles.taskPanel}
         >
-            <TitleBar />
+            <TitleBar>Description</TitleBar>
             <TaskDescription />
         </div>
     );

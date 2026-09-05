@@ -11,7 +11,7 @@ const Console: FC = (): React.JSX.Element => {
         <div 
             className={styles.consolePanel}
         >
-            <TitleBar />
+            <TitleBar>Console</TitleBar>
 
             <div
                 className={styles.console}
