@@ -11,6 +11,9 @@
     --main-bg: #0f1116;
     --header-bg: #1b1e26;
 
+    /* Header */
+    --header-height: 40px;
+
     /* Code editor */
     --editor-bg: #15171c;
     --editor-text: #d8dbe2;
@@ -31,7 +34,7 @@
     --editor-syntax-operator: #89ddff;
 
     /* Console */
-    --console-bg: #191b20;
+    --console-bg: gray;
 
     --button-primary: #7fc8a9;
 }

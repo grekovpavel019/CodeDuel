@@ -1,5 +1,6 @@
 import React, { type FC, type MouseEventHandler, useState } from "react";
 
+import Header from "@widgets/Header/Header";
 import ConsolePanel from "@widgets/ConsolePanel";
 import CodeEditorPanel from "@widgets/CodeEditorPanel";
 import TaskPanel from "@widgets/TaskPanel";
@@ -22,28 +23,35 @@ const CodePage: FC = (): React.JSX.Element => {
     }
 
     return (
-        <main className={styles.challengeWorkspace}>
-            <div className={styles.taskPanelArea}>
-                <TaskPanel />
-            </div>
+        <div 
+            className={styles.codePage}
+        >
+            <Header></Header>
+            <main className={styles.challengeWorkspace}>
+                <div className={styles.taskPanelArea}>
+                    <TaskPanel />
+                </div>
 
-            <div className={styles.codeEditorPanelArea}>
-                <CodeEditorPanel
-                    code={code}
-                    setCode={setCode}
-                />
-            </div>
+                <div className={styles.codeEditorPanelArea}>
+                    <CodeEditorPanel
+                        code={code}
+                        setCode={setCode}
+                    />
+                </div>
 
-            <div className={styles.consolePanelArea}>
-                <ConsolePanel />
-            </div>
+                <div className={styles.consolePanelArea}>
+                    <ConsolePanel />
+                </div>
 
-            <div className={styles.codeActionsArea}>
-                <CodeActions 
-                    handleClick={sendCode}
-                />
-            </div>
-        </main>
+                <div className={styles.codeActionsArea}>
+                    <CodeActions 
+                        handleClick={sendCode}
+                    />
+                </div>
+            </main>
+
+        </div>
+
     );
 };
 

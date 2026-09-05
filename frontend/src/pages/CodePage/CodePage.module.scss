@@ -1,8 +1,10 @@
-.challengeWorkspace {
-    height: 100vh;
-    
+.codePage {
     padding: 10px;
+}
 
+.challengeWorkspace {
+    height: calc(100vh - var(--header-height));
+    
     display: grid;
 
     grid-template-rows: 1fr 1fr 40px;
