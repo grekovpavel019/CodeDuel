@@ -1,12 +1,14 @@
+$page-gap: 25px;
+
 .codePage {
     display: flex;
     flex-direction: column;
 
     height: 100vh;
 
-    padding: 10px;
+    padding: 10px 20px;
 
-    gap: 10px
+    gap: $page-gap;
 }
 
 .challengeWorkspace {
@@ -16,7 +18,7 @@
 
     grid-template-rows: 1fr 1fr 40px;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: $page-gap;
 
     grid-template-areas: 
         "task code"

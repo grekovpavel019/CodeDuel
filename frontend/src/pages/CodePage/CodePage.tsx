@@ -26,7 +26,7 @@ const CodePage: FC = (): React.JSX.Element => {
         <div 
             className={styles.codePage}
         >
-            <Header></Header>
+            <Header />
             <main className={styles.challengeWorkspace}>
                 <div className={styles.taskPanelArea}>
                     <TaskPanel />

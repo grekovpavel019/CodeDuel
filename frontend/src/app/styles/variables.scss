@@ -1,29 +1,42 @@
 :root {
+
     /* Typography */
+
     --font-body: 'Manrope', sans-serif;
     --font-heading: 'Cormorant Garamond', serif;
     --font-code: 'JetBrains Mono', monospace;
 
-    --bg-title-bar: #30343e;
-    --text-primary: #e6e8ee;
+    --bg-title-bar: #343944;
+    --text-primary: #e5e7eb;
+
 
     /* App */
-    --main-bg: #0f1116;
-    --header-bg: #1b1e26;
+
+    --main-bg: #17191f;
+    --header-bg: #252932;
+
 
     /* Header */
+
     --header-height: 40px;
 
-    /* Code editor */
-    --editor-bg: #15171c;
-    --editor-text: #d8dbe2;
-    --editor-gutter-bg: #191b20;
-    --editor-gutter-text: #8e939d;
-    --editor-active-line: #46586144;
-    --editor-selection: #303644;
-    --editor-scrollbar-controls: #ffffff44;
 
-    /* Syntax HighLight */
+    /* Code editor */
+
+    --editor-bg: #1d2027;
+    --editor-text: #d9dce2;
+
+    --editor-gutter-bg: #22262e;
+    --editor-gutter-text: #8d939e;
+
+    --editor-active-line: #303640;
+    --editor-selection: #353b47;
+
+    --editor-scrollbar-controls: #ffffff2e;
+
+
+    /* Syntax Highlight */
+
     --editor-syntax-keyword: #c792ea;
     --editor-syntax-string: #c3e88d;
     --editor-syntax-number: #f78c6c;
@@ -33,8 +46,13 @@
     --editor-syntax-type: #ffcb6b;
     --editor-syntax-operator: #89ddff;
 
-    /* Console */
-    --console-bg: gray;
 
-    --button-primary: #7fc8a9;
+    /* Console */
+
+    --console-bg: #20242b;
+
+
+    /* Buttons */
+
+    --button-primary: #78c2a1;
 }
