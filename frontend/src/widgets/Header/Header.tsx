@@ -2,12 +2,21 @@ import React, { type FC } from "react";
 
 import styles from "./Header.module.scss"
 
-const Header: FC = (): React.JSX.Element => {
+type HeaderProps = {
+    name: string | null;
+}
+
+const Header: FC<HeaderProps> = (props: HeaderProps): React.JSX.Element => {
+    
+    const {
+        name
+    } = props;
+    
     return (
         <header
             className={styles.header}
         >
-            Шапочка
+            {name ?? "unknown"}
         </header>
     );
 };

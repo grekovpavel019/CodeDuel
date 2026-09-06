@@ -8,7 +8,15 @@ import CodeActions from "@features/code-actions";
 
 import styles from "./CodePage.module.scss"
 
-const CodePage: FC = (): React.JSX.Element => {
+type CodePageProps = {
+    name: string | null;
+}
+
+const CodePage: FC<CodePageProps> = (props: CodePageProps): React.JSX.Element => {
+
+    const {
+        name
+    } = props;
 
     const [code, setCode] = useState<string>("");
 
@@ -26,7 +34,9 @@ const CodePage: FC = (): React.JSX.Element => {
         <div 
             className={styles.codePage}
         >
-            <Header />
+            <Header
+                name={name}
+            />
             <main className={styles.challengeWorkspace}>
                 <div className={styles.taskPanelArea}>
                     <TaskPanel />
