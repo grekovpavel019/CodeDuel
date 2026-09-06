@@ -1,6 +1,6 @@
 import React, { type FC, type MouseEventHandler, useState } from "react";
 
-import Header from "@widgets/Header/Header";
+import Header from "@widgets/Header";
 import ConsolePanel from "@widgets/ConsolePanel";
 import CodeEditorPanel from "@widgets/CodeEditorPanel";
 import TaskPanel from "@widgets/TaskPanel";
