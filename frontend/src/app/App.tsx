@@ -5,7 +5,7 @@ import "./styles/variables.scss"
 import "./styles/reset.scss"
 
 import CodePage from "@pages/CodePage"
-import AuthPage from "@pages/AuthPage"
+import LandingPage from "@pages/LandingPage"
 
 import { Routes, Route } from "react-router-dom";
 
@@ -18,7 +18,7 @@ const App: FC = (): React.JSX.Element => {
         <Routes>
 
             <Route
-                path="/code"
+                path="/app"
                 element={
                     <CodePage 
                         name={name}
@@ -29,7 +29,7 @@ const App: FC = (): React.JSX.Element => {
             <Route
                 path="/"
                 element={
-                    <AuthPage />
+                    <LandingPage />
                 }
             />
         </Routes>

@@ -1,6 +1,6 @@
 import React, { type FC } from "react";
 
-const AuthPage: FC = (): React.JSX.Element => {
+const LandingPage: FC = (): React.JSX.Element => {
     return (
         <div>
             Авторизация
@@ -8,4 +8,4 @@ const AuthPage: FC = (): React.JSX.Element => {
     );
 };
 
-export default AuthPage;
+export default LandingPage;
