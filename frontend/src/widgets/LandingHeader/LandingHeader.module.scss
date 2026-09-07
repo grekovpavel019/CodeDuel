@@ -1,0 +1,43 @@
+.header {
+    padding: 0 30px;
+
+    height: 70px;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    background-color: var(--editor-bg);
+
+    color: var(--text-primary);
+
+    & button {
+        color: white;
+    }
+}
+
+.logo {
+    font-size: 2.5rem;
+}
+
+.headerActions {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    & button {
+        padding: 5px 15px;
+
+        border: 1px solid gray;
+    }
+}
+
+.pageContent {
+    height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
