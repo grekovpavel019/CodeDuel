@@ -12,10 +12,6 @@
     border-bottom: 1px solid #343944;;
 
     color: var(--text-primary);
-
-    & button {
-        color: white;
-    }
 }
 
 .logo {
@@ -26,20 +22,4 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
-
-    & button {
-        padding: 5px 15px;
-
-        border: 1px solid gray;
-    }
-}
-
-.pageContent {
-    height: calc(100vh - 70px);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
 }
