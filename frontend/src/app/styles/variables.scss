@@ -1,33 +1,61 @@
 :root {
+
     /* Typography */
+
     --font-body: 'Manrope', sans-serif;
     --font-heading: 'Cormorant Garamond', serif;
     --font-code: 'JetBrains Mono', monospace;
 
-    --bg-title-bar: #30343e;
     --text-primary: #e6e8ee;
 
+
     /* App */
+
     --main-bg: #141820;
     --header-bg: var(--surface);
 
     --surface: #20242c;
+    --surface-hover: #2a2d35;
+    --surface-active: #30343e;
+    --main: #141820;
 
-    --temp: #2a2d35;
+    --border: #30343e;
+
+
+    /* Accent */
+
+    --accent: #7fc8a9;
+    --accent-hover: #94d5b8;
+    --accent-muted: #7fc8a922;
+
+
+    /* Status */
+
+    --success: #7fc8a9;
+    --warning: #e8bd72;
+    --error: #e47d7d;
+    --info: #7fa9d9;
+
 
     /* Header */
+
     --header-height: 70px;
 
+
     /* Code editor */
+
     --editor-bg: var(--surface);
     --editor-text: #d8dbe2;
     --editor-gutter-bg: var(--surface);
     --editor-gutter-text: #8e939d;
+
     --editor-active-line: #46586144;
     --editor-selection: #303644;
     --editor-scrollbar-controls: #ffffff44;
 
-    /* Syntax HighLight */
+
+    /* Syntax Highlight */
+
     --editor-syntax-keyword: #c792ea;
     --editor-syntax-string: #c3e88d;
     --editor-syntax-number: #f78c6c;
@@ -37,8 +65,13 @@
     --editor-syntax-type: #ffcb6b;
     --editor-syntax-operator: #89ddff;
 
+
     /* Console */
+
     --console-bg: var(--surface);
 
-    --button-primary: #7fc8a9;
+
+    /* Buttons */
+
+    --button-primary: var(--accent);
 }
