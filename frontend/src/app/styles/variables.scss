@@ -8,16 +8,20 @@
     --text-primary: #e6e8ee;
 
     /* App */
-    --main-bg: #20242c;
-    --header-bg: #15171c;
+    --main-bg: #141820;
+    --header-bg: var(--surface);
+
+    --surface: #20242c;
+
+    --temp: #2a2d35;
 
     /* Header */
-    --header-height: 40px;
+    --header-height: 70px;
 
     /* Code editor */
-    --editor-bg: #15171c;
+    --editor-bg: var(--surface);
     --editor-text: #d8dbe2;
-    --editor-gutter-bg: #191b20;
+    --editor-gutter-bg: var(--surface);
     --editor-gutter-text: #8e939d;
     --editor-active-line: #46586144;
     --editor-selection: #303644;
@@ -34,7 +38,7 @@
     --editor-syntax-operator: #89ddff;
 
     /* Console */
-    --console-bg: #191b20;
+    --console-bg: var(--surface);
 
     --button-primary: #7fc8a9;
 }
