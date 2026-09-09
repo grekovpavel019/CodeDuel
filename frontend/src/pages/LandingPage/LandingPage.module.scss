@@ -1,5 +1,14 @@
+.pageWrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .pageContent {
     height: calc(100vh - 70px);
+    width: var(--main-width);
 
     display: flex;
     justify-content: center;
