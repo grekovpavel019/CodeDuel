@@ -13,8 +13,8 @@ const LandingHeader: FC = (): React.JSX.Element => {
             </div>
 
             <div className={styles.headerActions}>
-                <Button format="primary">Логин</Button>
-                <Button format="secondary">Регистрация</Button>
+                <Button format="primary">Join</Button>
+                <Button format="secondary">Log in</Button>
             </div>
         </header>
     );

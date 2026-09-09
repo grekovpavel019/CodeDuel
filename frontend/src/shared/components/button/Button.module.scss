@@ -1,35 +1,29 @@
 .primary {
-    border: 1px solid #7fc8a9;
-    
-    padding: 5px 10px;
-    
-    color: #7fc8a9;
-    letter-spacing: .5px;
-    border-radius: 8px;
+    padding: 5px 20px;
 
-    transition: all .2s ease-out;
+    border: 1px solid var(--color-accent);
+    border-radius: 5px;
+
+    color: var(--color-accent);
+
+    transition: opacity .2s ease-out;
 
     &:hover {
-        background-color: #7fc8a9;
-        color: white;
+        opacity: .7;
     }
 }
 
 .secondary {
-    color: white;
+    padding: 5px 20px;
+
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
     
-    letter-spacing: .5px;
-    padding: 5px 10px;
-    border: 1px solid #7fc8a9;
+    color: var(--text-secondary);
 
-    border-radius: 8px;
-
-    background-color: #7fc8a9;
-
-    transition: all .2s ease-out;
+    transition: opacity .2s ease-out;
 
     &:hover {
-        background-color: transparent;
-        color: #7fc8a9;
+        opacity: .7;
     }
 }
