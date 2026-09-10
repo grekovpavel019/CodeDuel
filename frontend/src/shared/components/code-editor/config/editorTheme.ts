@@ -7,7 +7,7 @@ import { tags } from "@lezer/highlight"
 
 export const editorTheme = EditorView.theme({
     "&": {
-        backgroundColor: "var(--editor-bg)",
+        backgroundColor: "#2a2d35",
     },
 
     "&.cm-focused": {
@@ -33,11 +33,11 @@ export const editorTheme = EditorView.theme({
         fontFamily: "var(--font-code)",
         fontSize: "0.8rem",
 
-        backgroundColor: "#141820",
+        backgroundColor: "#2a2d35",
     },
 
     ".cm-activeLineGutter": {
-        backgroundColor: "#141820",
+        backgroundColor: "#2a2d35",
         width: "100%",
 
         fontWeight:" bold",

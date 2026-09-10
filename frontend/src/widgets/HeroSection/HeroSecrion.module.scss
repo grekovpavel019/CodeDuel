@@ -1,8 +1,6 @@
 .heroSection {
-    width: 100%;
+    min-width: var(--main-width);
     height: 300px;
-
-    padding: 0 var(--main-padding);
 
     display: flex;
 
