@@ -1,9 +1,22 @@
-.heroWrapper {
+.heroSection {
+    width: 100%;
+    height: 300px;
+
+    padding: 0 var(--main-padding);
+
     display: flex;
-    flex-direction: column;
-    align-items: end;
+
 }
 
-.heroContent {
-    border: 1px solid white;
+.heroActions {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.heroMain {
+    width: 100%;
+
+    border: 1px solid var(--color-border);
 }

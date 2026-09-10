@@ -12,7 +12,7 @@ $page-gap: 25px;
 }
 
 .challengeWorkspace {
-    height: calc(100% - var(--header-height));
+    height: calc(100% - var(--header-height) - $page-gap);
     
     display: grid;
 

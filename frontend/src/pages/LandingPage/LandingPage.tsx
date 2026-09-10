@@ -10,9 +10,7 @@ const LandingPage: FC = (): React.JSX.Element => {
         <div className={styles.pageWrapper}>
             <LandingHeader />
 
-            <main className={styles.pageContent}>
-                <HeroSection />
-            </main>
+            <HeroSection />
         </div>
     );
 };

@@ -33,11 +33,12 @@ export const editorTheme = EditorView.theme({
         fontFamily: "var(--font-code)",
         fontSize: "0.8rem",
 
-        backgroundColor: "var(--editor-gutter-bg)",
+        backgroundColor: "#141820",
     },
 
     ".cm-activeLineGutter": {
-        backgroundColor: "transparent",
+        backgroundColor: "#141820",
+        width: "100%",
 
         fontWeight:" bold",
         fontSize: "1rem"

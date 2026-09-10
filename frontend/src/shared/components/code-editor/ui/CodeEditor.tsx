@@ -7,8 +7,8 @@ import { DEFAULT_EDITOR_EXTENSIONS, CASUAL_EDITOR_EXTENSIONS } from "../config/e
 import styles from "./CodeEditor.module.scss"
 
 type CodeEditorProps = { 
-    code: string;
-    setCode: Dispatch<SetStateAction<string>>;
+    code?: string;
+    setCode?: Dispatch<SetStateAction<string>>;
 
     casualMode: boolean;
 }
@@ -46,6 +46,7 @@ const CodeEditor: FC<CodeEditorProps> = (props: CodeEditorProps): React.JSX.Elem
                 EditorView.updateListener.of((update) => {
                     if (!update.docChanged) return;
                         
+                    if (!setCode) return; 
                     setCode(update.state.doc.toString());
                     
                 })

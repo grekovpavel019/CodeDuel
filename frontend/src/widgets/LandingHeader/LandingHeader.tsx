@@ -7,16 +7,23 @@ import styles from "./LandingHeader.module.scss"
 const LandingHeader: FC = (): React.JSX.Element => {
     return (
         
-        <header className={styles.header}>
-            <div className={styles.logo}>
-                codeDuel
-            </div>
+        <div className={styles.container}>
 
-            <div className={styles.headerActions}>
-                <Button format="primary">Join</Button>
-                <Button format="secondary">Log in</Button>
-            </div>
-        </header>
+
+            <header className={styles.header}>
+
+                <div className={styles.logo}>
+                    codeDuel
+                </div>
+
+                <div className={styles.headerActions}>
+                    <Button format="primary">Join</Button>
+                    <Button format="secondary">Log in</Button>
+                </div>
+
+            </header>
+        </div>
+
     );
 };
 
