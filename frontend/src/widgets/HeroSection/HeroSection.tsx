@@ -13,10 +13,8 @@ const HeroSections: FC = (): React.JSX.Element => {
             <div className={styles.heroActions}>
                 <h1>CodeDuel</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, beatae.</p>
-                
-                <Button format="primary">хуй</Button>
+            
             </div>
-
 
             <div className={styles.heroMain}>
                 <TitleBar>
@@ -25,6 +23,10 @@ const HeroSections: FC = (): React.JSX.Element => {
                 <CodeEditor 
                     casualMode={false}
                 />
+            </div>
+
+            <div>
+                <Button format="primary">Run Code</Button>
             </div>
         </section>
     );
