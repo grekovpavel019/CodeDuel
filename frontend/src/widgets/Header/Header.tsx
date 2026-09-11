@@ -1,5 +1,7 @@
 import React, { type FC } from "react";
 
+import TitleBar from "@shared/components/title-bar";
+
 import styles from "./Header.module.scss"
 
 type HeaderProps = {
@@ -15,7 +17,7 @@ const Header: FC<HeaderProps> = (props: HeaderProps): React.JSX.Element => {
     return (
         <header
             className={styles.header}
-        >
+            >
             {name ?? "unknown"}
         </header>
     );
