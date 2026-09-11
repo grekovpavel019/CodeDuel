@@ -1,4 +1,5 @@
 import React, { type FC } from "react";
+import { Link } from "react-router-dom";
 
 import Button from "@shared/components/button";
 
@@ -16,8 +17,11 @@ const LandingHeader: FC = (): React.JSX.Element => {
                 </div>
 
                 <div className={styles.actions}>
+                    
                     <Button format="primary">Join</Button>
-                    <Button format="secondary">Log in</Button>
+                    <Link to="/login">
+                        <Button format="secondary">Log in</Button>
+                    </Link>
                 </div>
 
             </header>

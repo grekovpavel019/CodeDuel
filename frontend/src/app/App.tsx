@@ -8,6 +8,7 @@ import CodePage from "@pages/CodePage"
 import LandingPage from "@pages/LandingPage"
 
 import { Routes, Route } from "react-router-dom";
+import LoginPage from "@pages/LoginPage";
 
 const App: FC = (): React.JSX.Element => {
 
@@ -30,6 +31,13 @@ const App: FC = (): React.JSX.Element => {
                 path="/"
                 element={
                     <LandingPage />
+                }
+            />
+
+            <Route 
+                path="/login"
+                element={
+                    <LoginPage />
                 }
             />
         </Routes>
