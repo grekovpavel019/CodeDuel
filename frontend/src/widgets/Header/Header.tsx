@@ -1,7 +1,5 @@
 import React, { type FC } from "react";
 
-import TitleBar from "@shared/components/title-bar";
-
 import styles from "./Header.module.scss"
 
 type HeaderProps = {
