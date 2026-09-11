@@ -10,13 +10,13 @@ const HeroSections: FC = (): React.JSX.Element => {
     return (
         <section className={styles.heroSection}>
 
-            <div className={styles.heroActions}>
+            <div className={styles.heroIntro}>
                 <h1>CodeDuel</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, beatae.</p>
             
             </div>
 
-            <div className={styles.heroMain}>
+            <div className={styles.heroDuel}>
                 <TitleBar>
                     Python
                 </TitleBar>
@@ -25,8 +25,8 @@ const HeroSections: FC = (): React.JSX.Element => {
                 />
             </div>
 
-            <div>
-                <Button format="primary">Run Code</Button>
+            <div className={styles.heroAction}>
+                <Button format="primary">Start Duel</Button>
             </div>
         </section>
     );
