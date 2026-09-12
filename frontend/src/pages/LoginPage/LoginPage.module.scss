@@ -27,14 +27,12 @@
 .heading {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 30px;
 }
 
 .logo {
     line-height: 1.2;
     font-size: 3rem;
-
-    margin-bottom: 15px;
 
     color: var(--color-accent);
 }
@@ -46,10 +44,10 @@
 .form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+    gap: 18px;
 
     margin-top: 15px;
+
 }
 
 .field {

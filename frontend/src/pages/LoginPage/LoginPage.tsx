@@ -20,7 +20,7 @@ const LoginPage: FC = (): React.JSX.Element => {
                     <form className={styles.form} action="">
                         <div className={styles.field}>
                             <input id="login" type="text" placeholder=" "/>
-                            <label htmlFor="password">Логин</label>
+                            <label htmlFor="login">Логин</label>
                         </div>
 
                         <div className={styles.field}>
