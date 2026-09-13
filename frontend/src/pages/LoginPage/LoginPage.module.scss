@@ -50,64 +50,6 @@
 
 }
 
-.field {
-    display: flex;
-    flex-direction: column;
-
-    margin-top: 18px;
-
-    font-size: 1.2rem;
-
-    position: relative;
-
-    & label {
-        font-family: inherit;
-        
-        position: absolute;
-        top: 50%;
-        left: 12px;
-
-        translate: 0 -50%;
-        scale: 1;
-
-        transition: 
-            translate .2s ease,
-            scale .2s ease;
-
-        transform-origin: left center;
-    }
-
-    & input {
-        padding: 5px 12px;
-
-        background-color: var(--color-surface-3);
-
-        border: 1px solid var(--color-border-secondary);
-        border-radius: 5px;
-
-        color: var(--text-primary);
-        font-family: inherit;
-
-        transition: background .2s ease;
-        
-        &:hover {
-            background-color: var(--color-surface-2);
-        }
-        
-        &:focus {
-            background-color: var(--color-surface-2);
-            outline: 2px solid var(--color-border-primary);
-        }
-
-        &:focus + label,
-        &:not(:placeholder-shown) + label {
-            translate: 0 -170%;
-            scale: 0.9;
-        }
-    }
-
-}
-
 .buttonArea {
     position: relative;
 

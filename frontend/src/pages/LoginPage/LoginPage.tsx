@@ -1,5 +1,6 @@
 import React, { type FC } from "react";
 
+import AuthField from "@shared/components/auth-field";
 import Button from "@shared/components/button";
 
 import styles from "./LoginPage.module.scss"
@@ -18,15 +19,17 @@ const LoginPage: FC = (): React.JSX.Element => {
                     </div>
 
                     <form className={styles.form} action="">
-                        <div className={styles.field}>
-                            <input id="login" type="text" placeholder=" "/>
-                            <label htmlFor="login">Логин</label>
-                        </div>
+                        <AuthField 
+                            label="Логин"
+                            id="login"
+                            type="text"
+                        />
 
-                        <div className={styles.field}>
-                            <input id="password" type="password" placeholder=" "/>
-                            <label htmlFor="password">Пароль</label>
-                        </div>
+                        <AuthField 
+                            label="Пароль"
+                            id="password"
+                            type="password"
+                        />
 
                         <div className={styles.buttonArea}>
                             <Button format="primary">Войти</Button>
