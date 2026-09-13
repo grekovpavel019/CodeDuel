@@ -6,5 +6,5 @@
 }
 
 .buttonArea {
-    @include mixins.auth-buttonArea(.7);
+    @include mixins.auth-buttonArea(.3);
 }

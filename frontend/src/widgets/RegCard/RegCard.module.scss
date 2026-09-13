@@ -1,5 +1,5 @@
 @use "@shared/styles/mixins" as mixins;
 
 .content {
-    @include mixins.auth-content;
+    @include mixins.auth-content(700px);
 }

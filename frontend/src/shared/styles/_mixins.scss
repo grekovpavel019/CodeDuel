@@ -14,11 +14,47 @@
     justify-content: center;
 }
 
-@mixin auth-content {
+@mixin auth-content($max-width: 700px) {
     padding: 30px 50px;
+
+    width: 100%;
+    max-width: $max-width;
 
     background-color: var(--color-surface-1);
 
     border: 1px solid var(--color-border-primary);
     border-radius: 10px 0 0 0;
+}
+
+@mixin auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    margin-top: 15px;
+}
+
+@mixin auth-buttonArea($flex: 0.3) {
+    position: relative;
+
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & button {
+        flex: $flex;
+    }
+
+    &::before {
+        content: "";
+
+        width: 100%;
+
+        position: absolute;
+        top: -15px;
+
+        border: 1px solid var(--color-border-primary)
+    }
 }
