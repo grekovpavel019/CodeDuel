@@ -1,7 +1,6 @@
 import React, { type FC } from "react";
 
-import AuthField from "@shared/components/auth-field";
-import Button from "@shared/components/button";
+import LoginForm from "@features/login-user/LoginForm";
 
 import styles from "./LoginPage.module.scss"
 
@@ -18,23 +17,7 @@ const LoginPage: FC = (): React.JSX.Element => {
                         <h2 className={styles.subLogo}>Войти</h2>
                     </div>
 
-                    <form className={styles.form} action="">
-                        <AuthField 
-                            label="Логин"
-                            id="login"
-                            type="text"
-                        />
-
-                        <AuthField 
-                            label="Пароль"
-                            id="password"
-                            type="password"
-                        />
-
-                        <div className={styles.buttonArea}>
-                            <Button format="primary">Войти</Button>
-                        </div>
-                    </form>
+                    <LoginForm />
 
                 </div>
 

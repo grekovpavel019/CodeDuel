@@ -40,33 +40,3 @@
 .subLogo {
     font-size: 1.8rem;
 }
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-
-    margin-top: 15px;
-
-}
-
-.buttonArea {
-    position: relative;
-
-    margin-top: 25px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &::before {
-        content: "";
-
-        width: 100%;
-
-        position: absolute;
-        top: -15px;
-
-        border: 1px solid var(--color-border-primary)
-    }
-}
