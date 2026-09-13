@@ -1,7 +1,7 @@
 import React, { type FC } from "react";
 
 import LoginForm from "@features/login-user/LoginForm";
-import AuthHeading from "@shared/components/auth-heading/AuthHeading";
+import AuthHeading from "@shared/components/auth-heading";
 
 import styles from "./LoginCard.module.scss";
 

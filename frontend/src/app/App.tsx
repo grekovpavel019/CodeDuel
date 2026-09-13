@@ -6,9 +6,10 @@ import "./styles/reset.scss"
 
 import CodePage from "@pages/CodePage"
 import LandingPage from "@pages/LandingPage"
+import LoginPage from "@pages/LoginPage";
+import RegPage from "@pages/RegPage/RegPage";
 
 import { Routes, Route } from "react-router-dom";
-import LoginPage from "@pages/LoginPage";
 
 const App: FC = (): React.JSX.Element => {
 
@@ -21,9 +22,7 @@ const App: FC = (): React.JSX.Element => {
             <Route
                 path="/app"
                 element={
-                    <CodePage 
-                        name={name}
-                    />
+                    <CodePage name={name} />
                 }
             />
 
@@ -38,6 +37,13 @@ const App: FC = (): React.JSX.Element => {
                 path="/login"
                 element={
                     <LoginPage />
+                }
+            />
+
+            <Route
+                path="/register"
+                element={
+                    <RegPage />
                 }
             />
         </Routes>

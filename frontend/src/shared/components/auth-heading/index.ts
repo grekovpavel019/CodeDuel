@@ -1,1 +1,1 @@
-export { default } from "./AuthHeading.module.scss";
+export { default } from "./AuthHeading";

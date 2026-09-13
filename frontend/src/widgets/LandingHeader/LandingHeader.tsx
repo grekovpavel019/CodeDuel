@@ -17,8 +17,9 @@ const LandingHeader: FC = (): React.JSX.Element => {
                 </div>
 
                 <div className={styles.actions}>
-                    
-                    <Button format="primary">Join</Button>
+                    <Link to="/register">
+                        <Button format="primary">Join</Button>
+                    </Link>
                     <Link to="/login">
                         <Button format="secondary">Log in</Button>
                     </Link>

@@ -1,6 +1,6 @@
 @use "@shared/styles/mixins" as mixins;
 
-.login {
+.register {
     @include mixins.auth-wrapper;
 }
 

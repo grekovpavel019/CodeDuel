@@ -1,6 +1,6 @@
 import React, { type FC } from "react";
 
-import LoginCard from "@widgets/LoginCard/LoginCard";
+import LoginCard from "@widgets/LoginCard/";
 
 import styles from "./LoginPage.module.scss"
 
