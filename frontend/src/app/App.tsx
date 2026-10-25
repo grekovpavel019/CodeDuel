@@ -1,4 +1,4 @@
-import React, { type FC, useState } from "react";
+import React, { type FC } from "react";
 
 import "./styles/global.scss"
 import "./styles/variables.scss"
@@ -13,7 +13,7 @@ import { Routes, Route } from "react-router-dom";
 
 const App: FC = (): React.JSX.Element => {
 
-    const [name, setName] = useState(null);
+    // const [name, setName] = useState(null);
 
     return (
 
@@ -22,7 +22,7 @@ const App: FC = (): React.JSX.Element => {
             <Route
                 path="/app"
                 element={
-                    <CodePage name={name} />
+                    <CodePage />
                 }
             />
 

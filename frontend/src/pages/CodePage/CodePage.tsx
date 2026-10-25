@@ -1,4 +1,4 @@
-import React, { type FC, type MouseEventHandler, useState } from "react";
+import React, { type MouseEventHandler, useState } from "react";
 
 import Header from "@widgets/Header";
 import ConsolePanel from "@widgets/ConsolePanel";
@@ -8,20 +8,16 @@ import CodeActions from "@features/code-actions";
 
 import styles from "./CodePage.module.scss"
 
-type CodePageProps = {
-    name: string | null;
-}
+// type CodePageProps = {
+//     name: string | null;
+// }
 
-const CodePage: FC<CodePageProps> = (props: CodePageProps): React.JSX.Element => {
-
-    const {
-        name
-    } = props;
+const CodePage = (): React.JSX.Element => {
 
     const [code, setCode] = useState<string>("");
 
     const sendCode: MouseEventHandler<HTMLButtonElement> = async () => {
-        const req = await fetch("http://127.0.0.1:3000/code", {
+        await fetch("http://127.0.0.1:3000/code", {
             method: "POST",
             body: JSON.stringify({ code }),
             headers: {
@@ -34,9 +30,7 @@ const CodePage: FC<CodePageProps> = (props: CodePageProps): React.JSX.Element =>
         <div 
             className={styles.codePage}
         >
-            <Header
-                name={name}
-            />
+            <Header />
             <main className={styles.challengeWorkspace}>
                 <div className={styles.taskPanelArea}>
                     <TaskPanel />
