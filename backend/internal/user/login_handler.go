@@ -28,6 +28,7 @@ func (l *loginHandler) Login(w http.ResponseWriter, r *http.Request) {
 	err = l.service.LoginUser(r.Context(), &req)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
 	}
 	w.WriteHeader(http.StatusCreated)
 	w.Write([]byte("Логин прошел успешно"))

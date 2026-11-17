@@ -9,7 +9,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./migration/scema_user.sql:/docker-entrypoint-initdb.d/scema.sql
+      - ./migration/schema_user.sql:/docker-entrypoint-initdb.d/scema.sql
       - ./postgres_data:/var/lib/postgresql/data
     healthcheck:
           test: ["CMD", "pg_isready", "-q", "-d", "postgres", "-U", "postgres"]

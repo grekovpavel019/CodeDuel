@@ -14,9 +14,12 @@ func NewLoginService(repo *Repository) *loginService {
 }
 
 func (l *loginService) LoginUser(ctx context.Context, req *RepositoryLogin) error {
-	_, err := l.repo.CheckUser(ctx, req)
+	param, err := l.repo.CheckUser(ctx, req)
 	if err != nil {
 		return fmt.Errorf("%s", err)
 	}
-	return err
+	if param.Password != req.Password {
+		return fmt.Errorf("Пароль или имя пользователя не подходит")
+	}
+	return nil
 }
