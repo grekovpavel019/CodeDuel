@@ -23,6 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
-# go models
-go.mod
-go.sum
+
+
+postman/
+.postman
+
+postgres_data/
+.env
